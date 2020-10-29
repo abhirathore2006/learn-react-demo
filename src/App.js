@@ -1,12 +1,19 @@
-import logo from './logo.svg';
+import React, {useState} from 'react'
 import './App.css';
-import {Welcome , WelcomeClass} from './Welcome'
+import {BackgroundSwitcher} from './components/BackgroundSwitcher';
 
 function App() {
+  let [active, setActive] = useState('');
+  function handleClick(color) {
+    document.body.style.backgroundColor = color;
+    setActive(color);
+  }
+
   return (
     <div className="App">
-       <Welcome name="Rachit" ></Welcome>
-       <WelcomeClass name="Robin" ></WelcomeClass>
+      <BackgroundSwitcher color="red" active={active} handleClick={handleClick} />
+      <BackgroundSwitcher color="green" active={active} handleClick={handleClick}/>
+      <BackgroundSwitcher color="blue" active={active} handleClick={handleClick} />
     </div>
   );
 }
