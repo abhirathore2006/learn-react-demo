@@ -2,7 +2,7 @@ import React from 'react';
 
 export function BackgroundSwitcher(props) {
   function handleClick(event) {
-    props.handleClick(props.color);
+    props.setActive(props.color);
   }
 
   return (
