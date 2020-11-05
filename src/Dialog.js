@@ -1,14 +1,16 @@
-import { Fragment } from 'react';
+import { Fragment, useContext } from 'react';
+import ThemeContext from './ThemeContext';
 import CustomButton from './CustomButton';
 
 const Dialog = (props) => {
-    const themeClass = `custom-button  ${props.theme ? 'white-button' : 'black-button'}`;
+    const theme = useContext(ThemeContext);
+    const themeClass = `custom-button  ${theme ? 'white-button' : 'black-button'}`;
     return (
         <Fragment>
             <div className='dialog'>
                 This is a nested component
             </div>
-            <CustomButton className={themeClass} {...props} />
+            <CustomButton className={themeClass} onClick={props.onClick} />
         </Fragment>
     );
 }
