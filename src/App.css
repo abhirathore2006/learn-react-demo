@@ -36,3 +36,54 @@
     transform: rotate(360deg);
   }
 }
+
+.white {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.black {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+.custom-button {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.white-button {
+  background-color: black;
+  color: white;
+}
+
+.black-button {
+  background-color: white;
+  color: black;
+}
+
+.theme-button {
+  background-color: chocolate;
+  color: white;
+  left: 500px;
+  position: absolute;
+}
+
+.container {
+  position: absolute;
+}
+
+.dialog {
+  margin-top: 100px;
+  height: 200px;
+  width: 635%;
+  background-color: brown;
+}
